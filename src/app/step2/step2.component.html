@@ -1,0 +1,10 @@
+<h1 class="cover-heading">Step 2.</h1>
+<app-color-picker
+  #colorPicker
+  titleColor="grey"
+  (colorSelected)="onColorSelected($event)">
+</app-color-picker>
+<div style="display:inline-block; margin-top: 50px">
+  <p class="lead" [ngStyle]="{color: previewColor}">Color Preview</p>
+</div>
+<button (click)="colorPicker.resetColor()">Reset</button>

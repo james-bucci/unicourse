@@ -1,0 +1,9 @@
+<p class="lead" [ngStyle]="{color: titleColor}">Pick a Color</p>
+<div style="width: 200px; margin-right: auto; margin-left: auto">
+    <div 
+      *ngFor="let color of colors"
+      (click)="setColor(color)"
+      style="display: block; width: 25px; height: 25px; float: left; margin: 10px"
+      [ngStyle]="{background: color}"></div>
+</div>
+

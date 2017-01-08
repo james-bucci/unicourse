@@ -1,0 +1,11 @@
+<input 
+  #input
+  type="text" 
+  placeholder={{placeholder}} 
+  name="searchString" 
+  [(ngModel)]="searchString">
+<button 
+  class="btn-clear"
+  (click)="onClear(input)">
+  Clear
+</button>

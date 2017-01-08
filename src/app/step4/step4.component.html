@@ -1,0 +1,13 @@
+<div 
+  app-collapse-on-click 
+  #cp="collapse-on-click"
+  [collapsed]='true' 
+  (changed)="onChanged($event)"
+  class="well"
+  [class.collapsed]="cp.collapsed"
+>
+  <i class="collapsible-indicator">**</i>
+  <div class="collapsible-section">
+    This page section is collapsible, click it and it will collapse or expand.
+  </div>
+</div>
