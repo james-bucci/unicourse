@@ -17,6 +17,8 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { ColorMatchComponent } from './color-match/color-match.component';
 import { CollapseOnClickDirective } from './shared/collapse-on-click.directive';
 import { Step4Component } from './step4/step4.component';
+import { Step5Component } from './step5/step5.component';
+import { Step6Component } from './step6/step6.component';
 
 @NgModule({
   declarations: [
@@ -32,18 +34,22 @@ import { Step4Component } from './step4/step4.component';
     ColorPickerComponent,
     ColorMatchComponent,
     CollapseOnClickDirective,
-    Step4Component
+    Step4Component,
+    Step5Component,
+    Step6Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: '', component: Step4Component },
+      { path: '', component: Step6Component },
       { path: 'step1', component: Step1Component },
       { path: 'step2', component: Step2Component },
       { path: 'step3', component: Step3Component },
       { path: 'step4', component: Step4Component },
+      { path: 'step5', component: Step5Component },
+      { path: 'step6', component: Step6Component },
       { path: 'about', component: AboutComponent },
       { path: '**', redirectTo: 'about', pathMatch: 'full' }
     ])
