@@ -22,6 +22,9 @@ import { Step6Component } from './step6/step6.component';
 import { TabbedInterfaceDirective } from './shared/tabbed-interface.directive';
 import { TabSelectorDirective } from './shared/tab-selector.directive';
 import { TabContainerDirective } from './shared/tab-container.directive';
+import { LessonsListComponent } from './lessons-list/lessons-list.component';
+import { LessonsService } from './services/lessons.service';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { TabContainerDirective } from './shared/tab-container.directive';
     Step6Component,
     TabbedInterfaceDirective,
     TabSelectorDirective,
-    TabContainerDirective
+    TabContainerDirective,
+    LessonsListComponent
   ],
   imports: [
     BrowserModule,
@@ -56,11 +60,12 @@ import { TabContainerDirective } from './shared/tab-container.directive';
       { path: 'step4', component: Step4Component },
       { path: 'step5', component: Step5Component },
       { path: 'step6', component: Step6Component },
+      { path: 'step7', component: LessonsListComponent },
       { path: 'about', component: AboutComponent },
       { path: '**', redirectTo: 'about', pathMatch: 'full' }
     ])
   ],
-  providers: [],
+  providers: [LessonsService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
