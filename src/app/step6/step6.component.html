@@ -1,20 +1,20 @@
-<div class="tab-container"
+<div class="tab-container" appTabbedContainers>
 
-  <ul class="tabs">
-    <li>Tab 1</li>
-    <li>Tab 2</li>
-    <li>Tab 3</li>
+  <ul class="list-group tabs"  >
+    <li appTabSelector="tab1" [active]="true" class="list-group-item">Tab 1</li>
+    <li appTabSelector="tab2" class="list-group-item">Tab 2</li>
+    <li appTabSelector="tab3" class="list-group-item">Tab 3</li>
   </ul>
 
-  <div class="tab-panel">
+  <div class="tab-panel" appTabContainer="tab1" [active]=true>
     This is tab 1 content
   </div>
 
-  <div class="tab-panel">
+  <div class="tab-panel" appTabContainer="tab2">
     This is tab 2 content
   </div>
 
-  <div class="tab-panel">
+  <div class="tab-panel" appTabContainer="tab3">
     This is tab 3 content
   </div>
 

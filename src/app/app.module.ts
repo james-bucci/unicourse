@@ -19,6 +19,9 @@ import { CollapseOnClickDirective } from './shared/collapse-on-click.directive';
 import { Step4Component } from './step4/step4.component';
 import { Step5Component } from './step5/step5.component';
 import { Step6Component } from './step6/step6.component';
+import { TabbedInterfaceDirective } from './shared/tabbed-interface.directive';
+import { TabSelectorDirective } from './shared/tab-selector.directive';
+import { TabContainerDirective } from './shared/tab-container.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { Step6Component } from './step6/step6.component';
     CollapseOnClickDirective,
     Step4Component,
     Step5Component,
-    Step6Component
+    Step6Component,
+    TabbedInterfaceDirective,
+    TabSelectorDirective,
+    TabContainerDirective
   ],
   imports: [
     BrowserModule,

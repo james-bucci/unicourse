@@ -1,13 +1,14 @@
 <div 
   app-collapse-on-click 
   #cp="collapse-on-click"
-  [collapsed]='true' 
+  [collapsed]='false' 
   (changed)="onChanged($event)"
   class="well"
-  [class.collapsed]="cp.collapsed"
 >
-  <i class="collapsible-indicator">**</i>
-  <div class="collapsible-section">
+  <span class="glyphicon glyphicon-circle-arrow-down collapsible-indicator" *ngIf="!cp.collapsed"></span>
+  <span class="glyphicon glyphicon-circle-arrow-up collapsible-indicator" *ngIf="cp.collapsed"></span>
+
+  <div class="collapsible-section" *ngIf="cp.collapsed">
     This page section is collapsible, click it and it will collapse or expand.
   </div>
 </div>

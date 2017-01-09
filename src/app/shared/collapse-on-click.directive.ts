@@ -18,7 +18,6 @@ export class CollapseOnClickDirective {
     this.collapsedChanged.emit(this.isCollapsed);
   }
 
-  @HostBinding("class.collapsed") 
   get collapsed() { 
     return this.isCollapsed; 
   }
